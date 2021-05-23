@@ -1,0 +1,28 @@
+{
+    "name": "arcadia/runner-bundle",
+    "description": "A bundle to manage queues with cron as engine",
+    "type": "symfony-bundle",
+    "keywords": ["runner", "queue", "crontab", "cron"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Flavian",
+            "email": "fcecilien@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Arcadia\\Bundle\\RunnerBundle\\": "src/"
+        }
+    },
+    "require": {
+        "doctrine/orm": "^2.8",
+        "symfony/dependency-injection": "^5.2",
+        "symfony/yaml": "^5.2",
+        "symfony/config": "^5.2",
+        "symfony/console": "^5.2",
+        "doctrine/doctrine-bundle": "^2.3",
+        "symfony/process": "^5.2",
+        "ext-pcntl": "^7.4"
+    }
+}

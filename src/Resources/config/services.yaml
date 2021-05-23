@@ -1,0 +1,18 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Arcadia\Bundle\RunnerBundle\:
+        resource: '../../*'
+        exclude: '../../{DependencyInjection,Resources,Command,ArcadiaRunnerBundle.php}'
+
+    Arcadia\Bundle\RunnerBundle\Command\RunnerStartCommand:
+        arguments: { $config: '%arcadia_runner.runners%' }
+
+    Arcadia\Bundle\RunnerBundle\Command\RunnerHandleTaskCommand:
+        arguments: { $config: '%arcadia_runner.runners%' }
+
+    Arcadia\Bundle\RunnerBundle\Service\TaskHandlerInterface:
+        public: true
